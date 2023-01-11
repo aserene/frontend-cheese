@@ -13,7 +13,7 @@ function Show(props) {
         <Form action={`/update/${cheese._id}`} method="post">
         <input type="input" name="name" defaultValue={cheese.name}/>
         <input type="input" name="countryOfOrigin" defaultValue={cheese.countryOfOrigin} />
-        <input type="input" name="title" defaultValue={cheese.image} />
+        <input type="input" name="image" defaultValue={cheese.image} />
         <input type="submit" value={`update ${cheese.name}`} />
       </Form>
       <h2>Delete {cheese.name}</h2>
