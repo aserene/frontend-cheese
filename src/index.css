@@ -5,9 +5,106 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Libre Baskerville', serif;
+  background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav {
+  background-color: rgb(234, 220, 102);
+  padding: 10px;
+  box-shadow: -4px -3px 20px 1px rgba(0,0,0,0.35);
+  margin-bottom: 30px;
+}
+
+.nav a, .card a {
+  text-decoration: none;
+  color: black;
+}
+
+.form {
+  background-color: white;
+  width: 30em;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: -4px -3px 10px 1px rgba(0,0,0,0.35);
+
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 10px;
+  width: 20em;
+  background-color: white;
+  margin: .25em
+}
+
+.card img{
+  width: 20em;
+  height: 10em;
+  border-radius: 10px;
+}
+
+.index h1 {
+  text-align: center;
+  font-style: italic;
+  text-decoration-line: underline;
+}
+
+input[type=submit]{
+  background-color: rgb(166, 166, 166);
+  font-family: 'Libre Baskerville', serif; ;
+  width: 80%;
+  height: 30px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+input[type=submit]:hover{
+  border: 2px solid black;
+}
+
+input[type=input]{
+  width: 80%;
+  height: 30px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid gray
+}
+
+.cheese {
+  text-align: center;
+}
+
+.cheese img {
+  width:30em;
+  border-radius: 10px;
+}
+
+.cheese input[type=input], input[type=submit]{
+  width: 30em
+}
+
+.cheese input[type=submit]{
+  margin: .25em;
+}
+
+.cheese input[type=submit]:hover{
+  border: 2px solid black
 }

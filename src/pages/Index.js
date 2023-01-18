@@ -4,25 +4,33 @@ function Index(props) {
   const cheese = useLoaderData()
 
   return (
-    <div className="form">
-        <h1>Add a Cheese:</h1>
-        <Form action="/create" method="post">
-        <input type="input" name="name" placeholder="name of cheeese" />
-        <input type="input" name="countryOfOrigin" placeholder="originated from" />
-        <input type="input" name="image" placeholder="picture of cheese" />
-        <input type="submit" value="Add Cheese" />
-      </Form>
-      <br/>
-      <h2>Cheese</h2>
-      {cheese.map(cheese => (
-        <div key={cheese._id} className="cheeses">
-            <Link to={`/${cheese._id}`}>
-                <h1>{cheese.name}</h1>
-            </Link>
-            <img src={cheese.image} alt={cheese.name} />
-            <h3>Origin: {cheese.countryOfOrigin}</h3>
+    <div className="index">
+        <div className="form">
+            <h2>Add a Cheese:</h2>
+            <Form action="/create" method="post">
+                <label for="name">Name of Cheese</label>
+            <input type="input" name="name"/><br/>
+            <label for="origin">Country of Origin</label>
+            <input type="input" name="countryOfOrigin"/><br/>
+            <label for="picture">Picture of Cheese</label>
+            <input type="input" name="image"/>
+            <br/>
+            <input type="submit" value="Add Cheese" />
+            </Form>
         </div>
+      <br/>
+      <h1>Cheese</h1>
+        <div key={cheese._id} className="container">
+        {cheese.map(cheese => (
+            <div className="card">
+                <Link to={`/${cheese._id}`}>
+                    <h2>{cheese.name}</h2>
+                </Link>
+                <img src={cheese.image} alt={cheese.name} />
+                <h3>Origin: {cheese.countryOfOrigin}</h3>
+            </div>
         ))}
+        </div>
     </div>
   )
 }
